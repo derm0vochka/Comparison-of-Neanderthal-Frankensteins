@@ -12,8 +12,6 @@ LOG="$WORKDIR/logs/pipeline_B.log"
 mkdir -p "$RES/pipeline_B"
 exec > >(tee -a "$LOG") 2>&1
 
-echo "[$(date)] Pipeline B, cтарт"
-
 NIS="$DATA/raw/IBS.YRI.grch37.chr6.em.tsv"
 VINDIJA_VCF="$DATA/vindija/chr6_mq25_mapab100.vcf.gz"
 OUT_A="$RES/pipeline_A"
