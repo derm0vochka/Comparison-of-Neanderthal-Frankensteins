@@ -94,7 +94,7 @@ cd ~/nd_pipeline
 sbatch run_03_analysis.sh
 tail -f logs/slurm_analysis_<job_id>.log
 # Или
-run_03_analysis.sh
+bash run_03_analysis.sh
 ```
 
 ```
