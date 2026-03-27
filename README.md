@@ -1,5 +1,5 @@
 # Пайплайн eQTL-влияние неандертальской интрогрессии
-# Структура файлов
+## Структура файлов
 
 ```
 nd_pipeline/                        рабочая директория
@@ -17,17 +17,17 @@ nd_pipeline/                        рабочая директория
 │   └── figures/                    все графики, рисунки рисунки
 └── logs/                           логи SLURM
 ```
-# Шаг 0: Подготовка на сервере
+## Шаг 0: Подготовка на сервере
 
-# Создание структуры директорий
+### Создание структуры директорий
 ```bash
 mkdir -p ~/nd_pipeline/{data/{raw,hapmap,gtex,vindija,gencode},scripts,results,logs}
 ```
-# Копирование NIS-файла на сервер
+### Копирование NIS-файла на сервер
 
-# Копирование всех скриптов на сервер
+### Копирование всех скриптов на сервер
 
-# Шаг 1: Скачивание данных
+## Шаг 1: Скачивание данных
 
 ```bash
 cd ~/nd_pipeline
@@ -37,7 +37,7 @@ tail -f logs/slurm_download_<job_id>.log
 bash run_00_download.sh
 ```
 
-# Шаг 2: Pipeline A (препроцессинг)
+## Шаг 2: Pipeline A (препроцессинг)
 
 ```bash
 cd ~/nd_pipeline
@@ -63,7 +63,7 @@ bash run_01_pipeline_A.sh 2>&1 | tee pipeline_A.log
 Итоговый файл: results/pipeline_A/chr6_windows_full.tsv
 ```
 
-# Шаг 3: Pipeline B, субпопуляции и поляризация Vindija
+## Шаг 3: Pipeline B, субпопуляции и поляризация Vindija
 
 ```bash
 cd ~/nd_pipeline
@@ -88,7 +88,7 @@ bash run_02_pipeline_B.sh 2>&1 | tee pipeline_B.log
 Итоговый файл: results/pipeline_B/chr6_windows_final.tsv
 ```
 
-# Шаг 4: Основной анализ
+## Шаг 4: Основной анализ
 
 ```bash
 cd ~/nd_pipeline
@@ -117,7 +117,7 @@ Sw ~ Fw + log(1 + D_TSS) + log(recomb)
 - Scatter plot Fw * Sw с генами-мишенями
 ```
 
-# Шаг 5: Визуализация
+## Шаг 5: Визуализация
 ```bash
 cd ~/nd_pipeline
 sbatch run_04_visualize.sh
@@ -133,4 +133,4 @@ bash run_04_visualize.sh
 | `fig6_summary_panel.png/pdf` | Сводная панель всех результатов |
 ```
 
-# Теперь можно скачать картинки локально
+## Теперь можно скачать картинки локально
