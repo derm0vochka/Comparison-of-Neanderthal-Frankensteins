@@ -20,6 +20,7 @@ wget ftp://ftp.ncbi.nlm.nih.gov/hapmap/recombination/2011-01_phaseII_B37/genetic
 # Вроде как не особо нужно GTEx_Analysis_v7_eQTL_expression_matrices.tar.gz, GTEx_Analysis_v7_eQTL_covariates.tar.gz, но можно тоже скачать
 # Локально выполнить, чтобы скачать scp -P 'порт подключения' GTEx_Analysis_v7_eQTL.tar.gz 'логин':~/nd_pipeline/data/gtex
 # Затем распакуем
+wget https://storage.googleapis.com/adult-gtex/bulk-qtl/v7/single-tissue-cis-qtl/GTEx_Analysis_v7_eQTL.tar.gz
 tar -xf GTEx_Analysis_v7_eQTL.tar
 
 # Vindija 33.19 VCF (chr6, hg19)
