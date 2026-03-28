@@ -1,6 +1,8 @@
 #!/bin/bash
+
 # Скачивание всех необходимых данных 
 # Запуск: bash 00_download_data.sh
+
 cd ~/nd_pipeline/data/
 
 # tsv-файлы IBS.YRI
