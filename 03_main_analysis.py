@@ -186,7 +186,7 @@ medians.to_csv(f"{OUT}/sw_medians_by_bin.tsv", sep="\t", header=True)
 df_corr = df_introgressed[["Fw","Sw_max"]].dropna()
 if len(df_corr) >= 5:
     rho, pval_rho = stats.spearmanr(df_corr["Fw"], df_corr["Sw_max"])
-    print(f"  Spearman ρ(Fw, Sw): {rho:.4f} (p={pval_rho:.4e})")
+    print(f"  Spearman p(Fw, Sw): {rho:.4f} (p={pval_rho:.4e})")
     with open(f"{OUT}/spearman_Fw_Sw.json", "w") as f:
         json.dump({"rho": float(rho), "pval": float(pval_rho),
                    "n": len(df_corr)}, f, indent=2)
