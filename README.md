@@ -21,7 +21,7 @@ nd_pipeline/                        рабочая директория
 ```
 ## 0. Подготовка
 
-### Создание структуры директорий
+### Создание структуры директории
 ```bash
 mkdir -p ~/nd_pipeline/{data/{raw,hapmap,gtex,vindija,gencode},scripts,results,logs}
 ```
