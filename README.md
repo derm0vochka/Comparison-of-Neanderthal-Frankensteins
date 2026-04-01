@@ -168,7 +168,6 @@ sudo apt-get install parallel
 ## Запустить параллельную обработку
 
 ```bash
-# НА СЕРВЕРЕ
 cd ~/nd_pipeline
 bash run_all_chromosomes_v2.sh 2>&1 | tee results/logs/all_chromosomes.log
 ```
